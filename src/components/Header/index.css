@@ -1,0 +1,17 @@
+/* .nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
+    background-color: transparent;
+    align-self: initial;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    height: 80px;
+  } */
+   .nav-container {
+    display: flex;
+    height: 80px;
+    width: 90vw;
+    justify-content: space-between;
+    background-color: white;
+   }

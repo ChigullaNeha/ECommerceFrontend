@@ -1,0 +1,127 @@
+/* .home-container {
+  height: 100vh;
+  width: 100vw;
+} */
+/* .home-light-container {
+  height: 100vh;
+  width: 100vw;
+  background-color: white;
+  color: black;
+}
+.home-dark-container {
+  height: 100vh;
+  width: 100vw;
+  background-color: black;
+  color: white;
+} */
+.nav-light-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
+    background-color: white;
+    align-self: initial;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    position: inherit;
+    height: 80px;
+    color: black;
+}
+.nav-dark-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
+    /* background-color: pink; */
+    align-self: initial;
+    box-shadow: 0 2px 4px 0 rgb(238, 235, 235), 0 2px 10px 0 rgba(239, 235, 235, 0.921);
+    position: inherit;
+    height: 80px;
+    background-color: black;
+    color: white;
+}
+.nav-heading {
+    font-size: 24px;
+  }
+  .shop-bag {
+    height: 50px;
+    width: 60px;
+  }
+  .shop-icon-container {
+    display: flex;
+    margin-left: 8px;
+    align-items: center;
+  }
+  .link-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 380px;
+  }
+  /* .nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
+    position: fixed;
+    /* background-color: pink; */
+    /* align-self: initial;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    height: 80px; */
+  /* } */
+  .light-icon {
+    height: 30px;
+    width: 30px;
+  }
+  .icon-light-container {
+    height: 30px;
+    width: 30px;
+    color: black;
+    cursor: pointer;
+  }
+  .icon-dark-containe {
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+    color: white;
+  }
+  .link-item {
+    font-size: 18px;
+  }
+  /* .home-heading-container {
+    width: 500px;
+  } */
+.home-heading-container {
+  width: 500px;
+  text-align: start;
+  height: 20vh;
+  width: 62vw;
+  padding-top: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.shop-ease {
+  display: flex;
+  align-items: center;
+}
+.home-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  width: 90vw;
+  flex-direction: column;
+}
+.note {
+    font-size: 20px;
+}
+.heading {
+  font-size: 26px;
+}
+.shop-btn {
+  background-color: cornflowerblue;
+  color: white;
+  height: 46px;
+  width: 160px;
+}

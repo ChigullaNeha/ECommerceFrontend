@@ -1,0 +1,84 @@
+.login-img {
+    height: 420px;
+    width: 600px;
+}
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh; 
+    background-color: white;
+    border-radius: 8px;
+    padding: 60px;
+    width: 60vw;
+}
+.log-container {
+  background-color: cornflowerblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+  width: 90vw;
+}
+.form-container {
+  margin-left: 32px;
+  text-align: start;
+}
+.form-input-el {
+  height: 32px;
+  width: 300px;
+  font-size: 18px;
+}
+.show-password-container {
+  display: flex;
+  align-items: center;
+}
+.show {
+  font-size: 18px;
+  margin-left: 6px;
+}
+.check-box {
+  height: 16px;
+  width: 16px;
+}
+.s-btn {
+  background-color: cornflowerblue;
+  cursor: pointer;
+  color: white;
+  margin-right: 8px;
+  width: 150px;
+}
+.btns-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.error-msg {
+    color: red;
+}
+.user {
+    font-size: 20px;
+}
+@media (max-width: 576px) {
+    .log-container {
+        width: 90vw;
+    }
+    .login-img {
+        height: 200px;
+        width: 220px;
+    }
+    .form-input-el {
+        width: 140px;
+        height: 24px;
+        font-size: 12px;
+    }
+    .s-btn {
+        width: 80px;
+    }
+    .show {
+      font-size: 12px;
+    }
+    .user {
+        font-size: 16px;
+    }
+}

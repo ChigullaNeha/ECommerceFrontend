@@ -1,0 +1,77 @@
+/* .reg-container {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: cornflowerblue;
+}
+.registration-container {
+  background-color: white;
+  border-radius: 12px;
+  border-width: 2px;
+  height: 570px;
+  width: 480px;
+  padding: 24px;
+  padding-left: 60px;
+}
+.reg-heading {
+  text-align: center;
+  font-size: 24px;
+  color: cornflowerblue;
+  padding-right: 22px;
+}
+.input-el {
+  width: 400px;
+  height: 42px;
+  font-size: 20px;
+  margin-bottom: 10px;
+  padding: 4px;
+}
+.accept-container {
+  display: flex;
+  align-items: center;
+}
+.check {
+  height: 16px;
+  width: 16px;
+  margin-right: 4px;
+}
+.accept {
+  font-size: 16px;
+}
+.register {
+  width: 400px;
+  height: 42px;
+  background-color: cornflowerblue;
+  cursor: pointer;
+  color: white;
+} */
+.registration-container {
+  background-color: lightblue;
+  height: 600px;
+  width: 900px;
+  padding: 10px;
+  color: white;
+}
+.input-el {
+    width: 400px;
+  height: 42px;
+  padding: 4px;
+  font-size: 20px;
+  margin-bottom: 10px;
+  padding: 4px;
+  border-radius: 4px;
+  border: none;
+}
+.check {
+  height: 16px;
+  width: 16px;
+  margin-right: 6px;
+}
+.checkbox-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 750px;
+}

@@ -1,0 +1,19 @@
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+  height: 100vh;
+}
+ .all-products-container {
+    text-align: center;
+    height: 106vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+/* .products-container {
+  width: 1200px;
+} */

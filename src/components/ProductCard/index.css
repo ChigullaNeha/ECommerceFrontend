@@ -1,0 +1,29 @@
+.product-img {
+  height: 300px;
+  border-radius: 8px;
+  width: 288px;
+}
+.ul-products-container {
+    list-style-type: none;
+    text-align: start;
+    color: black;
+  }
+.rating-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 38px;
+    width: 80px;
+    color: white;
+    border-radius: 8px;
+    background-color: #2196F3;
+}
+.star {
+    color: white;
+    margin-left: 4px;
+}
+.price-rating-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
