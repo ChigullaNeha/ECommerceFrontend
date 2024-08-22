@@ -49,7 +49,7 @@ const ProductItemDetails: React.FC = () => {
         method: 'GET',
       };
 
-      const response = await fetch(`http://localhost:8080/products/${id}`, options);
+      const response = await fetch(`https://ecommerce-23dd.onrender.com/products/${id}`, options);
       const data = await response.json();
 
       const updatedData: ProductData = {
@@ -75,9 +75,9 @@ const ProductItemDetails: React.FC = () => {
         id: each.id
       }));
       
-      console.log(formattedSimilarProductsData)
+      // console.log(formattedSimilarProductsData)
       setSimilarProducts(formattedSimilarProductsData)
-      setProductData(updatedData);
+       setProductData(updatedData);
     };
 
     fetchProductData();

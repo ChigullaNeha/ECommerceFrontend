@@ -60,7 +60,7 @@ const SignupPage: React.FC = () => {
 
         try {
             const role = "USER";
-            const response = await fetch('http://localhost:8080/register', {
+            const response = await fetch('https://ecommerce-23dd.onrender.com/register', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -75,12 +75,15 @@ const SignupPage: React.FC = () => {
             });
 
             if (!response.ok) {
-                const errorData = await response.json();
-                throw new Error(errorData.message || 'Registration failed. Please try again.');
+                console.log(response)
+                // const errorData = await response.json();
+                // throw new Error(errorData.message || 'Registration failed. Please try again.');
             }
+            
 
             navigate('/reg-success');
         } catch (err) {
+            console.log(err)
             setError((err as Error).message);
         }
     };

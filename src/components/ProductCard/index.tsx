@@ -7,18 +7,18 @@ interface Product {
     brand: string;
     imageUrl: string;
     price: number;
-    productId: string;
+    id: string;
     rating: number;
     title: string;
 }
 
 const ProductCard: React.FC<{ productDetails: Product }> = ({ productDetails }) => {
-    const { brand, imageUrl, price, rating, title, productId } = productDetails;
+    const { brand, imageUrl, price, rating, title, id } = productDetails;
 
     return (
         <div className='product-card-container'>
             <ul className='ul-products-container'>
-                <Link to={`/products/${productId}`}>
+                <Link to={`/products/${id}`}>
                     <img src={imageUrl} alt={title} className='product-img' />
                     <li>{title}</li>
                     <li>by {brand}</li>

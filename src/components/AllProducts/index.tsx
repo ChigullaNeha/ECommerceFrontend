@@ -8,7 +8,7 @@ interface Product {
     brand: string;
     imageUrl: string;
     price: number;
-    productId: string;
+    id: string;
     rating: number;
     title: string;
 }
@@ -90,7 +90,7 @@ const AllProducts = () => {
             },
             method: 'GET',
           }
-        const response = await fetch('http://localhost:8080/products', options);
+        const response = await fetch('https://ecommerce-23dd.onrender.com/products', options);
         const data = await response.json();
         console.log(data, "data")
 
@@ -98,7 +98,7 @@ const AllProducts = () => {
             brand: each.brand,
             imageUrl: each.image_url,
             price: each.price,
-            productId: each.product_id,
+            id: each.id,
             rating: each.rating,
             title: each.title
         }));
@@ -113,7 +113,7 @@ const AllProducts = () => {
             <h2>All Products</h2>
             <div className='product-list'>
                 {productsList.map(product => (
-                    <ProductCard key={product.productId} productDetails={product} />
+                    <ProductCard key={product.id} productDetails={product} />
                 ))}
             </div>
             </div>

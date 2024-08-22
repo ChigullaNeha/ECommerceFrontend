@@ -42,7 +42,7 @@ const LoginPage: React.FC = () => {
             return;
         }
         const userDetails = { username, password };
-        const url = 'http://localhost:8080/login';
+        const url = 'https://ecommerce-23dd.onrender.com/login';
         const options = {
             method: 'POST',
             headers: {

@@ -61,6 +61,7 @@
   height: 1000px;
   width: 90vw;
   margin-bottom: 200px;
+  flex-wrap: wrap;
 }
 .title {
     font-size: 24px;
@@ -104,5 +105,12 @@
       }
       .add {
         width: 120px;
+      }
+      .ul-container {
+        width: 400px;
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
       }
 }
