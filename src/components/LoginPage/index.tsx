@@ -4,7 +4,6 @@ import { useNavigate } from 'react-router-dom';
 import TextField from '@mui/material/TextField';
 import { Oval } from 'react-loader-spinner';
 
-
 import Cookies from 'js-cookie'
 
 const LoginPage: React.FC = () => {
@@ -13,7 +12,9 @@ const LoginPage: React.FC = () => {
     const [showErrMsg, setShowErrMsg] = useState(false);
     const [showPassword, setShowPassword] = useState(false);
     const [loading, isLoading] = useState(false);
+    const [notifyy, setNotify] = useState(false);
     const navigate = useNavigate();
+
     
     const renderLoader = () => (
         <div className="products-loader-container">
@@ -40,6 +41,7 @@ const LoginPage: React.FC = () => {
             expires: 30
         })
         navigate("/")
+        setNotify(true)
     }
     const onSubmitFailure = () => {
         setShowErrMsg(true)
@@ -48,9 +50,8 @@ const LoginPage: React.FC = () => {
     const submitForm = async (event: React.FormEvent<HTMLFormElement>) => {
         isLoading(true)
         event.preventDefault();
-        if (username.trim() === '' || password.trim() === '') {
+        if (username === '' || password === '') {
             setShowErrMsg(true);
-            return;
         }
         const userDetails = { username, password };
         const url = 'https://ecommerce-23dd.onrender.com/login';

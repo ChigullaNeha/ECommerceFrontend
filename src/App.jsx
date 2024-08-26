@@ -10,6 +10,7 @@ import ProductItemDetails from './components/ProductItemDetails';
 import CartContext from './context/CartContext';
 import ProtectedRoute from './components/ProtectedRoute';
 import Steppers from './components/Stepper';
+import Toast from './components/Toast';
 
 import './App.css';
 
@@ -94,6 +95,7 @@ const App = () => {
           <Route path="/products/:id" element={<ProductItemDetails />} />
           <Route path="/cart" element={<Cart />} />
           <Route path='/step' element={<Steppers />} />
+          <Route path='/toast' element={<Toast />} />
         </Route>
       </Routes>
     </Router>
