@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import ProductCard from '../ProductCard';
 import Cookies from 'js-cookie'
 import Header from '../Header';
+import { Oval } from 'react-loader-spinner';
+
 import './index.css';
 
 interface Product {
@@ -70,16 +72,24 @@ const ratingsList = [
   },
 ]
 
+
 const AllProducts = () => {
     const [productsList, setProducts] = useState<Product[]>([]);
     const [activeCategoryId, setActiveCategoryId] = useState('');
+    const [loading, isLoading] = useState(false)
 
     const changeCategoryId = activeCategoryId => {
         setActiveCategoryId(activeCategoryId);
     }
+    const renderLoader = () => (
+      <div className="products-loader-container">
+          <Oval color="#0b69ff" height="50" width="50" />
+        </div>
+    )
     useEffect(() => {
        
         fetchedData();
+        isLoading(true)
     }, []);
 
     const fetchedData = async () => {
@@ -104,20 +114,24 @@ const AllProducts = () => {
         }));
 
         setProducts(updatedData);
+        isLoading(false)
     }
+    const renderProducts = () => (
+      <div className='all-products-container'>
+      <div className='products-container'>
+      <h2  style={{fontFamily: 'Bree-serief', fontSize: '28px'}}>All Products</h2>
+      <div className='product-list'>
+          {productsList.map(product => (
+              <ProductCard key={product.id} productDetails={product} />
+          ))}
+      </div>
+      </div>
+      </div>
+    );
     return (
         <div>
         <Header />
-        <div className='all-products-container'>
-            <div className='products-container'>
-            <h2>All Products</h2>
-            <div className='product-list'>
-                {productsList.map(product => (
-                    <ProductCard key={product.id} productDetails={product} />
-                ))}
-            </div>
-            </div>
-            </div>
+           {loading ? renderLoader() : renderProducts()}
             </div>
     );
 }

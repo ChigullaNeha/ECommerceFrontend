@@ -6,6 +6,7 @@ import Cookies from 'js-cookie';
 import Header from '../Header';
 import CartContext from '../../context/CartContext';
 import SimilarProductItem from '../SimilarProductItem';
+import {Oval} from 'react-loader-spinner'
 import './index.css';
 
 interface ProductData {
@@ -38,8 +39,10 @@ const ProductItemDetails: React.FC = () => {
   const { id } = useParams<{ id: string }>();
   const [similarProducts, setSimilarProducts] = useState([]);
   const { addCartItem } = useContext(CartContext); 
+  const [loading, isLoading] = useState(false)
 
   useEffect(() => {
+    isLoading(true)
     const fetchProductData = async () => {
       const jwtToken = Cookies.get('jwt-token');
       const options = {
@@ -81,6 +84,7 @@ const ProductItemDetails: React.FC = () => {
     };
 
     fetchProductData();
+    isLoading(false)
   }, [id]);
 
   const onIncrementQuantity = () => {
@@ -101,14 +105,17 @@ const ProductItemDetails: React.FC = () => {
   
 
   if (!productData) {
-    return <div>Loading...</div>;
+    return (
+      <div className="products-loader-container">
+        <Oval color="#0b69ff" height="50" width="50" />
+      </div>
+    )
   }
 
   const { brand, imageUrl, price, rating, title, description, availability } = productData;
-
-  return (
+  
+  const renderProductDetails = () => (
     <div>
-      <Header />
       <div className='product-item-details-container'>
         <div>
           <img src={imageUrl} alt={title} className='product-detail-img' />
@@ -140,6 +147,18 @@ const ProductItemDetails: React.FC = () => {
                 />
               ))}
       </ul>
+    </div>
+  )
+  const renderLoader = () => (
+    <div className="products-loader-container">
+        <Oval color="#0b69ff" height="50" width="50" />
+      </div>
+  )
+    
+  return (
+    <div>
+      <Header />
+      {loading ? renderLoader() : renderProductDetails()}
     </div>
   );
 };

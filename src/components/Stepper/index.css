@@ -1,0 +1,49 @@
+.card-container {
+  display: flex;
+  width: 2000x;
+  height: 180px;
+  justify-content: space-around;
+  text-align: start;
+}
+.card-heading {
+  text-align: start;
+}
+.card-input-el {
+  width: 400px;
+  height: 34px;
+  border-radius: 8px;
+  font-size: 18px;
+}
+.card {
+  margin: 6px;
+}
+.order-placed-img {
+  height: 100px;
+  width: 100px;
+  margin-top: 12px;
+}
+.customer-info {
+  width: 90vw;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.payment {
+  width: 90vw;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.order {
+  width: 90vw;
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.customer-info-heading {
+  text-align: start;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}

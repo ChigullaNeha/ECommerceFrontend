@@ -12,7 +12,7 @@ const EmptyCartView: React.FC = () => (
     <h1 className="cart-empty-heading">Your Cart Is Empty</h1>
 
     <Link to="/products">
-      <button type="button" className="shop-now-btn">
+      <button type="button" style={{ fontSize: '26px' }} className="shop-now-btn">
         Shop Now
       </button>
     </Link>

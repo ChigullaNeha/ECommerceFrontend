@@ -2,7 +2,6 @@ import React, { useContext } from 'react';
 import { BsPlusSquare, BsDashSquare } from 'react-icons/bs';
 import { AiFillCloseCircle } from 'react-icons/ai';
 import CartContext from '../../context/CartContext';
-//import { CartItem as CartItemType } from '../../types';
 
 import './index.css';
 
@@ -38,12 +37,12 @@ const CartItem  = ({ cartItemDetails }) => {
   const totalPrice = price * quantity;
 
   return (
-    <li className="cart-item">
-      <img className="cart-product-image" src={imageUrl} alt={title} />
+    <li className="cart-item" style={{width: '600px'}}>
+      <img className="cart-product-image" src={imageUrl} style={{height: '120px', width: '120px'}}  alt={title} />
       <div className="cart-item-details-container">
         <div className="cart-product-title-brand-container">
-          <p className="cart-product-title">{title}</p>
-          <p className="cart-product-brand">by {brand}</p>
+          <p className="cart-product-title" style={{ fontSize: '24px' }}>{title}</p>
+          <p className="cart-product-brand" style={{ fontSize: '20px' }}>by {brand}</p>
         </div>
         <div className="cart-quantity-container">
           <button

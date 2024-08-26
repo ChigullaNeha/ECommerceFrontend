@@ -23,11 +23,19 @@
 .form-container {
   margin-left: 32px;
   text-align: start;
+  padding: 10px;
+}
+.form-password-el {
+  height: 32px;
+  width: 300px;
+  font-size: 18px;
+ 
 }
 .form-input-el {
   height: 32px;
   width: 300px;
   font-size: 18px;
+  
 }
 .show-password-container {
   display: flex;
@@ -71,6 +79,11 @@
         width: 140px;
         height: 24px;
         font-size: 12px;
+    }
+    .form-password-el {
+      width: 140px;
+      height: 24px;
+      font-size: 12px;
     }
     .s-btn {
         width: 80px;

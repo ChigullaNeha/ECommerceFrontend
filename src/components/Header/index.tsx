@@ -12,7 +12,7 @@ const Header: React.FC = () => {
     return (
         <nav className='nav-container'>
         <div className="shop-icon-container">
-          <h1 className="nav-heading">Shop<span>Ease</span></h1>
+          <h1 className="nav-heading"  style={{fontFamily: 'Bree-serief', fontSize: '30px'}}>Shop<span>Ease</span></h1>
           <img src="https://res.cloudinary.com/dedvz7flb/image/upload/v1723287766/bag_9525741_tnumi6.png" alt="shopease" className="shop-bag" />
         </div>
         <div className="link-container">

@@ -28,6 +28,7 @@ const Cart: React.FC = () => {
               type="button"
               className="remove-all-btn"
               onClick={onClickRemoveAllBtn}
+              style={{width: '200px', borderWidth: '2px', borderStyle: 'solid'}}
             >
               Remove All
             </button>

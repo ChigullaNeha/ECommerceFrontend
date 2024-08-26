@@ -9,6 +9,7 @@ import RegistrationSucess from './components/RegistrationSucess';
 import ProductItemDetails from './components/ProductItemDetails';
 import CartContext from './context/CartContext';
 import ProtectedRoute from './components/ProtectedRoute';
+import Steppers from './components/Stepper';
 
 import './App.css';
 
@@ -92,6 +93,7 @@ const App = () => {
           <Route path="/products" element={<AllProducts />} />
           <Route path="/products/:id" element={<ProductItemDetails />} />
           <Route path="/cart" element={<Cart />} />
+          <Route path='/step' element={<Steppers />} />
         </Route>
       </Routes>
     </Router>
